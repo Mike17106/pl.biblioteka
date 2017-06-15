@@ -1,0 +1,6 @@
+<h1>Lista Wyporzyczeń</h1>
+<ul>
+	<li ng-repeat="b in listCtrl.rentold">
+		<a ng-href="#!rentdetails/{{b.token}}">{{b.book}} - {{b.createddate}} </a>
+	</li>
+</ul>
