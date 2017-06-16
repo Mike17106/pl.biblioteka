@@ -5,8 +5,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import pl.biblioteka.repository.RentRepository;
 import pl.biblioteka.model.Rent;
+import pl.biblioteka.repository.RentRepository;
+
 import java.net.URI;
 import java.util.List;
 
@@ -17,7 +18,8 @@ public class RentEndpoint {
 	private final RentRepository rentRepository;
 
 	@Autowired
-	public RentEndpoint(RentRepository rentRepository) {this.rentRepository = rentRepository;
+	public RentEndpoint(RentRepository rentRepository) {
+		this.rentRepository = rentRepository;
 	}
 
 	@GetMapping("/api/rents")
