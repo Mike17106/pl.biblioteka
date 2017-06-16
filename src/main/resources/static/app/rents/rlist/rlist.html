@@ -1,0 +1,6 @@
+<h1>Lista Rezerwacji</h1>
+<ul>
+	<li ng-repeat="r in rlistsCtrl.rents">
+		<a ng-href="#!rdetails/{{r.id}}">{{r.title}} - {{r.author}} {{r.tokens}} ({{r.isbn}}) ({{r.available}})</a>
+	</li>
+</ul>
