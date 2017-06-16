@@ -12,5 +12,4 @@ public class BibliotekaApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }
