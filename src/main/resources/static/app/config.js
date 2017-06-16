@@ -11,11 +11,6 @@ angular.module('app')
                 controller: 'DetailsController',
                 controllerAs: 'detailsCtrl'
             })
-            .when('/rdetails/:id', {
-                templateUrl: 'app/rent/details/details.html',
-                controller: 'RentDetailsController',
-                controllerAs: 'rentdetailsCtrl'
-            })
             .when('/new', {
                 templateUrl: 'app/books/new/new.html',
                 controller: 'NewController',
@@ -27,15 +22,21 @@ angular.module('app')
                 controllerAs: 'authController'
             })
             .when('/rlist', {
-                templateUrl: 'app/rents/list/list.html',
-                controller: 'RentlController',
-                controllerAs: 'remtlCtrl'
+                templateUrl: 'app/rent/rlist.html',
+                controller: 'RListController',
+                controllerAs: 'rlistCtrl'
             })
-            .when('/rent', {
-                templateUrl: 'app/rents/nrent/new.html',
-                controller: 'NrentController',
-                controllerAs: 'rentCtrl'
+            .when('/rdetails', {
+                templateUrl: 'app/details/rlist.html',
+                controller: 'RDetailsController',
+                controllerAs: 'rdetailsCtrl'
             })
+            .when('/rnew', {
+                templateUrl: 'app/rent/rnew.html',
+                controller: 'NRentController',
+                controllerAs: 'rnewCtrl'
+            })
+
             .otherwise({
                 redirectTo: '/list'
             });
