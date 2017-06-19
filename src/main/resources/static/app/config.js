@@ -22,17 +22,17 @@ angular.module('app')
                 controllerAs: 'authController'
             })
             .when('/rlist', {
-                templateUrl: 'app/rents/rlist/rlist.html',
+                templateUrl: 'app/books/rlist/rlist.html',
                 controller: 'RListController',
                 controllerAs: 'rlistsCtrl'
             })
             .when('/rdetails', {
-                templateUrl: 'app/rents/details/rdetails.html',
+                templateUrl: 'app/books/details/rdetails.html',
                 controller: 'RDetailsController',
                 controllerAs: 'rdetailsCtrl'
             })
             .when('/rnew', {
-                templateUrl: 'app/rents/rent/rnew.html',
+                templateUrl: 'app/books/rent/rnew.html',
                 controller: 'NRentController',
                 controllerAs: 'rnewCtrl'
             })

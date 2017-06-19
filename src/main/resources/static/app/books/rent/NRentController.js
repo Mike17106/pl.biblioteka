@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('NRentController', function (Rents, Rents) {
+    .controller('NRentController', function (Rents, Rent) {
         var vm = this;
         vm.rent = new Rent();
         vm.saveRent = function () {
