@@ -18,9 +18,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.csrf()
 				.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()).and()
 				.authorizeRequests()
-				.antMatchers(HttpMethod.POST).authenticated().and()
+				.antMatchers("/").permitAll()
+				.antMatchers("/api/rents").permitAll()
+				.antMatchers(HttpMethod.GET).permitAll()
+				.anyRequest().authenticated().and()
 				.sessionManagement()
-				.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+				.sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+				.formLogin();
 		//.http.csrf().disable();
 
 	}
@@ -28,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
-				.withUser("admin").password("admin").roles("ADMIN").and()
-				.withUser("lenny").password("pass2").roles("USER");
+				.withUser("admin").password("admin").roles("ROLE_ADMIN").and()
+				.withUser("lenny").password("pass2").roles("ROLE_USER");
 	}
 }

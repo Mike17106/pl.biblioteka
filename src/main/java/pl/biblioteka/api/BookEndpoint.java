@@ -36,7 +36,6 @@ public class BookEndpoint {
 			return ResponseEntity.notFound().build();
 		}
 	}
-
 	@PostMapping("/api/books")
 	public ResponseEntity<?> save(@RequestBody Book book) {
 		if (book.getId() == null) {
